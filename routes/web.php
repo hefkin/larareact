@@ -18,6 +18,5 @@ Route::get('/', 'IndexController@index');
 
 Route::get('/test', function() 
 {
-    $users = User::get();
-    dd($users);
+    return response()->json(User::get());
 });
